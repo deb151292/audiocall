@@ -14,5 +14,5 @@ services:
       context: ./client
       dockerfile: Dockerfile
     ports:
-      - "3000:80"
+      - "4000:80"
     restart: unless-stopped
