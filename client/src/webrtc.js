@@ -8,7 +8,7 @@ const reconnectDelay = 2000;
 
 function connectWebSocket(userId, setCallStatus) {
   return new Promise((resolve, reject) => {
-    ws = new WebSocket(`ws://localhost:8080/ws?id=${userId}`);
+    ws = new WebSocket(`ws://194.164.149.68:8080/ws?id=${userId}`);
 
     ws.onopen = () => {
       console.log('WebSocket connected');
