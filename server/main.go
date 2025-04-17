@@ -88,7 +88,7 @@ func main() {
 	http.HandleFunc("/ws", wsHandler)
 	http.HandleFunc("/webhook", webhookHandler)
 	log.Println("Server starting on :8080")
-	if err := http.ListenAndServe(":8080", nil); err != nil {
+	if err := http.ListenAndServeTLS(":443", "/etc/ssl/selfsigned/selfsigned.crt", "/etc/ssl/selfsigned/selfsigned.key", nil)	; err != nil {
 		log.Fatalf("Server error: %v", err)
 	}
 }
